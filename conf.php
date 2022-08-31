@@ -1,8 +1,7 @@
 <?php
 @session_start();
 
-$server     = 'localhost';
-$port       = '3306';
-$user       = 'root';
-$password   = '';
-$db         = 'vizsga';
+$server     = '127.0.0.1';
+$user       = 'grekoffice';
+$password   = '***********';
+$db         = 'grekoffice';
