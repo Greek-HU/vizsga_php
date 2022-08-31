@@ -27,7 +27,7 @@ if(isset($_POST['order_btn'])){
    }
 
    $total_product = implode(', ',$prod_pcs);
-   $detail_query = DH::order($name, $total_product, $price_total);
+   $detail_query = DH::order($name, $number, $email, $method, $street, $city, $country , $total_product, $pin_code, $price_total);
    
    if($detail_query){
       echo "
@@ -102,7 +102,7 @@ if(isset($_POST['order_btn'])){
             <span>Fizetés módja</span>
             <select name="method">
                <option value="Utánvét" selected>Kézpénz</option>
-               <option  value="Bank kártya"class="icon-cc-visa">Bank Kártya</option>
+               <option value="Bank kártya" >Bank Kártya</option>
                <option value="paypal">Utánvét</option>
             </select>
          </div>

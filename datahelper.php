@@ -93,9 +93,9 @@ Class DH {
         mysqli_query(self::$_conn, "UPDATE `carts` SET quantity = '$qty' WHERE id = '$cart_id' AND user_id = " . self::$_user_id);
     }
 
-    public static function order($name, $prod_pcs, $price_total){
+    public static function order($name, $number, $email, $method, $street, $city, $country, $prod_pcs, $pin_code, $price_total){
         //(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')
-        $detail_query = mysqli_query(self::$_conn, "INSERT INTO `orders`(name, prod_pcs, total_price) VALUES ('$name', '$prod_pcs', '$price_total')") or die('query failed');
+        $detail_query = mysqli_query(self::$_conn, "INSERT INTO `orders`(name, number, email, method, street, city, country, prod_pcs, pin_code, total_price) VALUES ('$name', '$number','$email','$method','$street','$city','$country','$prod_pcs', $pin_code, '$price_total')") or die('query failed');
         return $detail_query;
     }
    

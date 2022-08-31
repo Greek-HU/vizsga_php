@@ -9,6 +9,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -56,8 +57,6 @@
       }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <link href="css/blog.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/fontello.css">
   </head>
   <body>
   <?php require_once './datahelper.php'; ?>    
@@ -79,18 +78,20 @@
         <a href="cart.php" class="fi-shopping-cart" id="cart-icon">Kosár </a>
         <span class="count-numb"><?= DH::getCartCount() ?></span>
         <?php if ($_SESSION['user_id'] > 0) { ?>
-          Hello <br> <b><?= DH::getUserName() ?></b>
+          Hello<b><?= DH::getUserName() ?></b>
           <?php } else { ?>
             <a class="btn btn-sm btn-outline-secondary" href="login.php">Bejelentkezés</a>
           <?php } ?>
-        
+          <a class="icon-logout" href="logout.php"></a>
+          
+          
       </div>
     </div>
   </header>
     
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-      
+    <div></div>
       <!--
       <a class="p-2 link-secondary" href="#">U.S.</a>
       <a class="p-2 link-secondary" href="#">Technology</a>

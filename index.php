@@ -29,7 +29,7 @@ if ($termekek === false){
                 <p class="card-text" id="megnevezes"><?= $termek['description'] ?></p>
                 <p class="card-text mb-auto" id="ar"><?= $termek['price'] ?> Ft</p>
                 <input type="hidden" name="termek_id" value="<?= $termek['id'] ?>">
-                <button href="#" class="addToCart btn btn-primary" value="addtocart" name="add_to_cart">Kosárba</button>
+                <button  class="addToCart btn btn-primary" value="addtocart" name="add_to_cart">Kosárba</button>
               </div>
           </div>
       </form>

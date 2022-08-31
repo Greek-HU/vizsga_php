@@ -62,7 +62,7 @@ if(isset($_GET['delete_all'])){
                <form  action="" method="post">
                   <input type="hidden" name="update_quantity_id"  value="<?= $cart_item['id']; ?>" >
                   <input type="number" name="update_quantity" min="1"  value="<?= $cart_item['quantity']; ?>" >
-                  <input type="submit"  value="Frissít"  name="update_update_btn icon-arrows-cw">
+                  <input type="submit"  value="Frissít"  name="update_update_btn">
                </form>   
             </td>
             <td>
